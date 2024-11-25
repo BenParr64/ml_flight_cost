@@ -1,0 +1,2 @@
+database:
+  url: "postgresql+psycopg2://airflow:airflow@localhost:5432/ml_flight_cost"

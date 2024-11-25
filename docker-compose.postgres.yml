@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres_service
+    environment:
+      POSTGRES_USER: airflow           # Username
+      POSTGRES_PASSWORD: airflow       # Password
+      POSTGRES_DB: ml_flight_cost      # Database name
+    ports:
+      - "5432:5432"                    # Expose Postgres port
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persist data
+
+volumes:
+  postgres_data:
+
+# user / pass for postgres console benparr
